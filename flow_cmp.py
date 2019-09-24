@@ -58,7 +58,7 @@ class FS_nlri(object):
 
 def flow_rule_cmp(a, b):
     """
-    Implementation of the flowspec sorting algorithm in draft-ietf-idr-rfc5575bis-04.
+    Implementation of the flowspec sorting algorithm in draft-ietf-idr-rfc5575bis.
     """
     for comp_a, comp_b in itertools.zip_longest(a.components,
                                            b.components):
@@ -75,7 +75,7 @@ def flow_rule_cmp(a, b):
             return B_HAS_PRECEDENCE
         # component types are equal -> type specific comparison
         if comp_a.component_type in (IP_DESTINATION, IP_SOURCE):
-            # assuming comp_a.value, comp_b.value of type ipaddress
+            # assuming comp_a.value, comp_b.value of type ipaddress.IPv4Network
             if comp_a.value.overlaps(comp_b.value):
                 # longest prefixlen has precedence
                 if comp_a.value.prefixlen > comp_b.value.prefixlen:
