@@ -1,5 +1,5 @@
 """
-Copyright (c) 2019 IETF Trust and the persons identified as authors
+Copyright (c) 2020 IETF Trust and the persons identified as authors
 of draft-ietf-idr-rfc5575bis. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
